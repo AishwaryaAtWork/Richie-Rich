@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from "react";
 import {moneyAmount} from './Constants';
 
-function Money_pyramid() {
-    const [quesNo ,setQuesNo] =useState(1);
+function Money_pyramid({setQuesNo,quesNo}) {
   return (
     <>
         <div className="money-pyramid">
