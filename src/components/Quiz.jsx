@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import useSound from 'use-sound';
+import correct from '../assets/sounds/correct_sound.mp3';
+import wrong from '../assets/sounds/end_sound.mp3';
 
 function Quiz({data,setStop,setQuesNo,quesNo}) {
     const [question,setQuestion]=useState(null);
     const [selectAns,setSelectAns]=useState(null);
-    const [className,setClassName]=useState('ansswer');
+    const [className,setClassName]=useState('answer');
+    const [correctAns]=useSound(correct);
+    const [wrongAns]=useSound(wrong);
     const delay=(duration,callback)=>{
         setTimeout(()=>{
             callback();
@@ -14,13 +19,19 @@ function Quiz({data,setStop,setQuesNo,quesNo}) {
         setClassName("answer active");
         delay(3000,() => 
             setClassName(a.correct?"answer correct":"answer wrong"));
-        delay(6000,() =>{
+        delay(5000,() =>{
             if(a.correct){
-                setQuesNo((prev)=>prev+1);
-                setSelectAns(null);
+                correctAns();
+                delay(1000,()=>{
+                    setQuesNo((prev)=>prev+1);
+                    setSelectAns(null);
+                });
             }
             else{
-                setStop(true);
+                wrongAns();
+                delay(1000,()=>{
+                    setStop(true);
+                });
             }
         });
     };  
