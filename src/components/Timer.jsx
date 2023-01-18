@@ -14,7 +14,7 @@ function Timer({setStop,quesNo}) {
             setTimer((prev)=>prev-1);
         },1000);
         return ()=>clearInterval(interval);
-    },[setStop,timer]);
+    },[setStop,timer,gameEnd]);
     useEffect(()=>{
         setTimer(30);
     },[quesNo]);

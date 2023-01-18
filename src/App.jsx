@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       {username ? (
         <>
-          <Main_pg quesNo={quesNo} />
-          <Money_pyramid setQuesNo={setQuesNo} quesNo={quesNo}/>
+          <Main_pg setQuesNo={setQuesNo} quesNo={quesNo}/>
+          <Money_pyramid quesNo={quesNo}/>
         </>
       ) : <Start setUsername={setUsername}/>}
     </div>
