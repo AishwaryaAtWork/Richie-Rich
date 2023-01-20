@@ -9,8 +9,6 @@ REACT and CSS.
 
 ## Screenshots
 
-![Screenshot (554)](https://user-images.githubusercontent.com/109826222/213705860-5ad30a60-16db-4c5d-8328-09ee3d50fac7.png)
-
 ![Screenshot (553)](https://user-images.githubusercontent.com/109826222/213704085-91bcf07c-5509-451f-a412-06c4cf4ec22a.png)
 
 ![Screenshot (555)](https://user-images.githubusercontent.com/109826222/213705926-053bfc1d-7d3b-42de-aa89-f653fb2f363d.png)
